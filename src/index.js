@@ -1,1 +1,1 @@
-alert("Failte / Welcome!");
+// alert("Failte / Welcome!");
