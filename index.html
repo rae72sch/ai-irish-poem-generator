@@ -1,27 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
-  <link rel="stylesheet" href="src/style.css">
-  <title>AI Irish poem generator</title>
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1>An AI Irish Poem Generator ☘️</h1>
-    </header>
-    <main>
-      <form id="poem-form">
-        <input type="text" class="form-input" placeholder="Enter the topic of the poem..." autocomplete="off" autofocus required /> 
-        <input type="submit" class="submit-button" />
-      </form>
-      <div class="poem" id="poem">
-      </div>
-    </main>
-  </div>
-  <footer>This project was coded by <a href="https://github.com/rae72sch" target="_blank">Rachel Schofield</a>, is open sourced on <a href="https://github.com/rae72sch/ai-irish-poem-generator" target="_blank">GitHub</a> and is hosted on <a href="https://ai-irish-poem-generator.netlify.app/">Netlify</a></footer>
-  <script src="src/index.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <title>AI Irish poem generator</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>An AI Irish Poem Generator ☘️</h1>
+      </header>
+      <main>
+        <form id="poem-form">
+          <input
+            type="text"
+            class="form-input"
+            id="user-input"
+            placeholder="Enter the topic of the poem..."
+            autocomplete="off"
+            autofocus
+            required
+          />
+          <input type="submit" class="submit-button" />
+        </form>
+        <div class="poem" id="poem"></div>
+      </main>
+    </div>
+    <footer>
+      This project was coded by
+      <a href="https://github.com/rae72sch" target="_blank">Rachel Schofield</a
+      >, is open sourced on
+      <a
+        href="https://github.com/rae72sch/ai-irish-poem-generator"
+        target="_blank"
+        >GitHub</a
+      >
+      and is hosted on
+      <a href="https://ai-irish-poem-generator.netlify.app/">Netlify</a>
+    </footer>
+    <script src="src/index.js"></script>
+  </body>
 </html>
