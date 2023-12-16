@@ -14,19 +14,22 @@
         <h1>An AI Irish Poem Generator ☘️</h1>
       </header>
       <main>
-        <form id="poem-form">
-          <input
-            type="text"
-            class="form-input"
-            id="user-input"
-            placeholder="Enter the topic of the poem..."
-            autocomplete="off"
-            autofocus
-            required
-          />
-          <input type="submit" class="submit-button" />
-        </form>
-        <div class="poem" id="poem"></div>
+        <div class="form-container">
+          <form id="poem-form">
+            <input
+              type="text"
+              class="form-input"
+              id="user-input"
+              placeholder="Enter the topic for the poem..."
+              autocomplete="off"
+              autofocus
+              required
+            />
+            <input type="submit" class="submit-button" />
+          </form>
+          <div class="example">e.g. flowers, books or love</div>
+        </div>
+        <div class="poem hidden" id="poem"></div>
       </main>
     </div>
     <footer>

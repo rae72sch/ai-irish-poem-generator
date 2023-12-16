@@ -4,11 +4,16 @@ function generatePoem(event) {
   let userInput = document.querySelector("#user-input");
 
   let context =
-    "You are a poem expert and love to write short poems. Please return a four line poem in the Irish language. Please also include a translation of the poem below it. Please return all of this in basic HTML. Sign the poem by 'AI Poem Generator' at the end of the translation and make only the signature bold. Please leave a space between the poem and the translation. Don't give the poem a title. Please don't make each line a new paragraph.";
+    "You are a poem expert and love to write short poems. Please return a four line poem in the Irish language. Please also include a translation of the poem below it. Please return all of this in basic HTML. Sign the poem by 'AI Poem Generator' at the end of the translation and make only the signature bold. Please leave a space between the poem and the translation. Don't give the poem a title. Please don't use any <p> or </p> elements.";
   let prompt = `User instructions: Generate an Irish poem about ${userInput.value}`;
 
   let apiKey = "33840b8e1tc5oa820f7a06b487319f0d";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+
+  let poemElement = document.querySelector("#poem");
+  poemElement.classList.remove("hidden");
+  poemElement.innerHTML = `<span class="generating-timer">⏳</span> <span class="generating-text">Generating an Irish poem about ${userInput.value}...</span>`;
+  
 
   axios.get(apiUrl).then(displayPoem);
 }
